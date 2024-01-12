@@ -7,9 +7,13 @@ export const MainContainer = styled.div`
   justify-content: center;
   align-items: center;
   height: 100vh;
-  width: 100vh;
   background-size: cover;
   background-image: linear-gradient(to top, #3c2940, #0b0c1e);
+`
+export const ImageAndTextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `
 
 export const Image = styled.img`
