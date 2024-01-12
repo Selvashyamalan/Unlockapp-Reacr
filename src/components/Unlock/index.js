@@ -1,6 +1,6 @@
 import {useState} from 'react'
 
-import {MainContainer, Image, Description, Button} from './styledComponents'
+import {MainContainer,ImageAndTextContainer, Image, Description, Button} from './styledComponents'
 
 const Unlock = () => {
   const [lock, setLock] = useState(true)
@@ -15,8 +15,10 @@ const Unlock = () => {
 
   return (
     <MainContainer>
-      <Image src={ImgUrl} alt={lock ? 'lock' : 'unlock'} />
-      <Description>Your Device is {lock ? 'Locked' : 'Unlocked'}</Description>
+      <ImageAndTextContainer>
+        <Image src={ImgUrl} alt={lock ? 'lock' : 'unlock'} />
+        <Description>Your Device is {lock ? 'Locked' : 'Unlocked'}</Description>
+      </ImageAndTextContainer>
       <Button type="button" onClick={onClickButton}>
         {lock ? 'Unlock' : 'Lock'}
       </Button>
